@@ -1,4 +1,10 @@
 <script setup lang="ts">
+import { useHead } from "@vueuse/head";
+
+useHead({
+  title: "Crypto Tracker - Home",
+});
+
 interface Coin {
   id: string;
   name: string;
