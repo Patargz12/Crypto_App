@@ -67,9 +67,9 @@ const risingCoins = computed(() =>
     <!-- Navbar -->
     <nav class="bg-white dark:bg-gray-800 shadow-md">
       <div
-        class="container mx-auto px-6 py-4 flex justify-between items-center"
+        class="container mx-auto px-8 md:px-24 py-4 flex justify-between items-center"
       >
-        <div class="flex flex-row ml-5 md:ml-0">
+        <div class="flex flex-row ml-5">
           <CryptoLogo class="absolute top-0 mr-4" />
           <h1
             class="text-xl md:text-2xl font-bold text-gray-800 ml-6 dark:text-white"
