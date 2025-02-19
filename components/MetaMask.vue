@@ -31,7 +31,7 @@ const disconnectWallet = () => {
 </script>
 
 <template>
-  <div class="flex flex-row bg-gray-900 justify-center text-white">
+  <div class="flex flex-row justify-center text-white">
     <div
       v-if="account"
       class="flex flex-row-reverse mt-2 md:mt-0 items-center space-x-4"
