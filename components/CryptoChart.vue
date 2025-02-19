@@ -2,7 +2,7 @@
 .container-card-charts {
   position: relative;
   width: 300px;
-  height: 400px;
+  height: 350px;
   background: linear-gradient(
     to top,
     rgba(255, 255, 255),

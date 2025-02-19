@@ -71,27 +71,31 @@ const risingCoins = computed(() =>
       >
         <div class="flex flex-row ml-5 md:ml-0">
           <CryptoLogo class="absolute top-0 mr-4" />
-          <h1 class="text-2xl font-bold text-gray-800 ml-6 dark:text-white">
+          <h1
+            class="text-xl md:text-2xl font-bold text-gray-800 ml-6 dark:text-white"
+          >
             Crypto Tracker
           </h1>
         </div>
-        <button
-          @click="toggleDarkMode"
-          class="p-2 rounded-full bg-gray-200 dark:bg-gray-700"
-        >
-          <span
-            v-if="isDarkMode"
-            class="text-yellow-400"
-            style="font-size: 1.3rem; line-height: 1.3rem"
-            >☀️</span
+        <div className="flex flex-row space-x-5">
+          <button
+            @click="toggleDarkMode"
+            class="p-2 rounded-full bg-gray-200 dark:bg-gray-700"
           >
-          <span
-            v-else
-            class="text-gray-700"
-            style="font-size: 1.3rem; line-height: 1.3rem"
-            >🌙</span
-          >
-        </button>
+            <span
+              v-if="isDarkMode"
+              class="text-yellow-400"
+              style="font-size: 1.3rem; line-height: 1.3rem"
+              >☀️</span
+            >
+            <span
+              v-else
+              class="text-gray-700"
+              style="font-size: 1.3rem; line-height: 1.3rem"
+              >🌙</span
+            >
+          </button>
+        </div>
       </div>
     </nav>
 
@@ -101,8 +105,9 @@ const risingCoins = computed(() =>
       <div
         class="flex flex-col md:flex-row justify-end items-center space-x-0 md:space-x-12"
       >
-        <section>
+        <section class="space-y-4">
           <CryptoChart />
+          <MetaMask />
         </section>
         <section class="mb-12 w-full mt-6 md:mt-0">
           <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
