@@ -55,6 +55,12 @@ const risingCoins = computed(() =>
         .slice(0, 6)
     : []
 );
+
+const bitcoinData = computed(() =>
+  Array.isArray(coins.value)
+    ? coins.value.find((coin) => coin.id === "bitcoin")
+    : null
+);
 </script>
 
 
@@ -106,7 +112,7 @@ const risingCoins = computed(() =>
         class="flex flex-col md:flex-row justify-end items-center space-x-0 md:space-x-12"
       >
         <section class="space-y-4">
-          <CryptoChart />
+          <CryptoChart v-if="bitcoinData" :bitcoinData="bitcoinData" />
           <MetaMask />
         </section>
         <section class="mb-12 w-full mt-6 md:mt-0">
